@@ -3,6 +3,7 @@ import logger from "morgan";
 import cors from "cors";
 import { createServer } from "http";
 import indexRouter from "./routes/index.route.js";
+import patientRouter from "./routes/patient.router.js";
 import connection from "./configuration/database.config.js";
 import cookieParser from "cookie-parser";
 import session from "express-session";
@@ -31,16 +32,18 @@ const app = express(),
   },
   attachRouters = async () => {
     app.use(EMR.ROUTES.ROUTE_INDEX, indexRouter);
+    app.use(EMR.ROUTES.ROUTE_PATIENT, patientRouter);
   },
   connectToDatabase = async () => {
-    connection.connect(async (err) => {
-      if (err) {
-        console.error.bind(console, EMR.MESSAGES.CONNECTION_ERR);
-      } else {
+    connection
+      .authenticate()
+      .then(async () => {
         console.log(EMR.MESSAGES.CONNECTION_SUCCESS);
         await listenToServer();
-      }
-    });
+      })
+      .catch((err) => {
+        console.error.bind(console, EMR.MESSAGES.CONNECTION_ERR);
+      });
   },
   checkEnv = () => {
     if (!existsSync(".env")) {

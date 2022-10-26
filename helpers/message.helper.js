@@ -13,8 +13,12 @@ const EMR = {
   },
   ROUTES: {
     ROUTE_INDEX: "/",
+    ROUTE_PATIENT: "/patient",
     INDEX_ENDPOINTS: {
       WELCOME: "/welcome",
+    },
+    PATIENT_ENDPOINTS: {
+      ADD_PATIENT: "/add",
     },
   },
 };
