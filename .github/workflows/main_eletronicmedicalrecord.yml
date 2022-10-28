@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'eletronicmedicalrecord'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8E7A2AAFCD124FE79CCA3FDF29B9F12C }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8EA488AD4BAA429FADEF2EE43EE6F860 }}
           package: .
