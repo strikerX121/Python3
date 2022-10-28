@@ -3,7 +3,7 @@ dotenv.config();
 
 const config = {
   ENV: process.env.ENV,
-  PORT: process.env.PORT ? process.env.PORT : 3000,
+  PORT: process.env.PORT ? process.env.PORT : 8080,
   APP_URL: process.env.APP_URL,
   SQL_HOST: process.env.SQL_HOST,
   SQL_USER: process.env.SQL_USER,
