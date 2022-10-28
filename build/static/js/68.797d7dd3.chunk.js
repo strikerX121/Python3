@@ -1,0 +1,2 @@
+(this.webpackJsonpflexy=this.webpackJsonpflexy||[]).push([[68],{752:function(e,t,n){"use strict";n.r(t);n(0);var s=n(16),c=n(1);t.default=function(){return Object(c.jsx)(c.Fragment,{children:Object(c.jsx)(s.b,{})})}}}]);
+//# sourceMappingURL=68.797d7dd3.chunk.js.map
