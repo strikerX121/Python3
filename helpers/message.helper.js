@@ -20,6 +20,7 @@ const EMR = {
     PATH_USER_AVATAR: "public/uploads/avatar",
     PATH_VIEW: "views",
     PATH_IMAGES: "public/images",
+    PATH_FRONTEND: "build",
   },
   ROUTES: {
     ROUTE_INDEX: "/",

@@ -19,6 +19,9 @@ const app = express(),
     app.use(json());
     app.use(urlencoded({ extended: false }));
     app.use(cookieParser());
+    app.use(
+      expressStatic(EMR.PATHS.PATH_FRONTEND)
+    );
   },
   attachExternalMiddlewares = async () => {
     app.use(cors());

@@ -1,6 +1,9 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 const welcome = [
     (req, res) => {
-      res.json("Welcome to EMR");
+      res.redirect(process.env.APP_URL+ "/index.html");
     },
   ],
   indexDomain = { welcome };
